@@ -1,0 +1,15 @@
+---
+layout: post
+title: Package management for the Web
+date: '2014-08-27T18:20:00-04:00'
+tags:
+- npm
+- composer
+- gem
+tumblr_url: http://louisroy.net/post/95945732477/package-management-for-the-web
+---
+<p>In these last couple of weeks, I&rsquo;ve been experimenting with various package managers in an effort to really grasp how they work and assess if package management as a whole would be a productivity booster at my workplace. While this seems like a <a href="http://imgur.com/r/scrubs/TMBKXe1">classic case of the D.U.H.</a> for Ruby, Node.js or Python folks out there, as a PHP guy in an agency, this is rather new to me.</p>
+<p>I&rsquo;ve fiddled with <a href="https://rubygems.org/">RubyGems</a> and <a href="https://www.npmjs.org">NPM</a> for the last couples of years now, but never in the context of building an app. For example, I&rsquo;ve used <a href="http://sass-lang.com/">SASS</a> to build better stylesheets, I&rsquo;ve used <a href="http://progrium.com/localtunnel/">LocalTunnel</a> to test websites on mobile devices, I have tested <a href="http://rubygems.org/gems/guard-livereload">LiveReload</a> to accelerate front-end development. But none of these packages made it <em>in</em> an actual app as a library; they were rather tools that helped me build and test my projects. So I started looking at how and why we should start doing this at work in a very PHP/CSS/JS driven environment.</p>
+<p>With PHP having such a low-entry barrier, it usually gets bad rep for having a disorganized community and probably the most diverse types of users (absolute non-programmers that fiddle with HTML once in a while to veterans of the Web industry). <a href="https://getcomposer.org">Composer</a> kinda proves, for me at least, that this language is still alive and stronger than ever. Most major frameworks are represented on <a href="https://packagist.org/">Packagist</a> and more packages are added every day. For us, it would make a lot of sense to keep our repositories to a minimum and download dependencies apart from the rest.</p>
+<p>On the frontend side, <a href="http://bower.io/">Bower</a> makes an excellent job at covering most libraries. NPM provides all the necessary <a href="http://gruntjs.com/">Grunt</a> plugins to optimize images, render screenshots, concatenate and minimize stylesheets and scripts and so much more.</p>
+<p>I have yet to figure out how we will integrate all of these technologies in our day-to-day workflow but I strongly believe this year will be the year of package management for us.</p>

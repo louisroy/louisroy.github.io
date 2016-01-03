@@ -3,10 +3,57 @@
 ---
 @charset "utf-8";
 
-
+@font-face {
+	font-family: 'Scarn Sans';
+	src: url("fonts/scarn-sans.eot");
+	src: url("fonts/scarn-sans.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans.woff") format("woff"), url("fonts/scarn-sans.ttf") format("truetype"), url("fonts/scarn-sans.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Medium';
+	src: url("fonts/scarn-sans-medium.eot");
+	src: url("fonts/scarn-sans-medium.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-medium.woff") format("woff"), url("fonts/scarn-sans-medium.ttf") format("truetype"), url("fonts/scarn-sans-medium.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Light';
+	src: url("fonts/scarn-sans-light.eot");
+	src: url("fonts/scarn-sans-light.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-light.woff") format("woff"), url("fonts/scarn-sans-light.ttf") format("truetype"), url("fonts/scarn-sans-light.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Regular Italic';
+	src: url("fonts/scarn-sans-regular-italic.eot");
+	src: url("fonts/scarn-sans-regular-italic.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-regular-italic.woff") format("woff"), url("fonts/scarn-sans-regular-italic.ttf") format("truetype"), url("fonts/scarn-sans-regular-italic.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Bold Italic';
+	src: url("fonts/scarn-sans-bold-italic.eot");
+	src: url("fonts/scarn-sans-bold-italic.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-bold-italic.woff") format("woff"), url("fonts/scarn-sans-bold-italic.ttf") format("truetype"), url("fonts/scarn-sans-bold-italic.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Bold';
+	src: url("fonts/scarn-sans-bold.eot");
+	src: url("fonts/scarn-sans-bold.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-bold.woff") format("woff"), url("fonts/scarn-sans-bold.ttf") format("truetype"), url("fonts/scarn-sans-bold.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Thin';
+	src: url("fonts/scarn-sans-thin.eot");
+	src: url("fonts/scarn-sans-thin.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-thin.woff") format("woff"), url("fonts/scarn-sans-thin.ttf") format("truetype"), url("fonts/scarn-sans-thin.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
+@font-face {
+	font-family: 'Scarn Sans Light Italic';
+	src: url("fonts/scarn-sans-light-italic.eot");
+	src: url("fonts/scarn-sans-light-italic.eot?#iefix") format("embedded-opentype"), url("fonts/scarn-sans-light-italic.woff") format("woff"), url("fonts/scarn-sans-light-italic.ttf") format("truetype"), url("fonts/scarn-sans-light-italic.svg#ywftsvg") format("svg");
+	font-weight: normal;
+	font-style: normal; }
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Scarn Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -14,16 +61,22 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+$text-color:       #222222;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #29A3CC;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$blue:#29A3CC;
+$black:#222222;
+$black-light:lighten(#222222, 40%);
+$black-dark:lighten(#222222, 40%);
+$white:#fdfdfd;
+
 // Width of the content area
-$content-width:    800px;
+$content-width:    640px;
 
 $on-palm:          600px;
 $on-laptop:        800px;

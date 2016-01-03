@@ -1,0 +1,30 @@
+---
+layout: post
+title: My first photo booth
+date: '2013-11-05T21:49:00-05:00'
+tags:
+- diy
+- interactivity
+tumblr_url: http://louisroy.net/post/66151331792/my-first-photo-booth
+---
+<p>A couple of weeks ago, we launched a pretty daring project with our clients at <a href="http://galeriesdelacapitale.com/">Galeries de la Capitale</a>: an interactive photo booth.</p>
+<p><iframe frameborder="0" height="393" src="//www.youtube.com/embed/6YotUP9IZLU" width="100%"></iframe></p>
+<p>The goal of the <a href="https://concours.galeriesdelacapitale.com/tetedaffiche/">project</a>: provide the client with a permanent contest installation right inside the shopping mall. Each day, a new contest is launched and a new prize is offered courtesy of one of the shopkeepers. The visitors can then participate by standing in front of the photo booth and having their picture taken. <strong>And that’s it</strong>. No forms, no check boxes, no legal blah-blah, just your face.</p>
+<p>It’s a contest, but it’s also a game: your picture is then displayed on the booth and the goal is to stay there the longest time you can. The more seconds you accumulate, the more chances you have of winning. At the end of the day, we draw a random second and whoever was displayed at that exact moment wins. The visitor’s face is displayed on the public website and he can claim his prize by presenting himself back at the shopping mall.</p>
+<p>The booth looks stunning, and it’s actually a rather simple installation:</p>
+<ul><li>Metal frame screwed on top of a super-heavy metal plate;</li>
+<li>Desktop computer with four DVI outputs;</li>
+<li>Four 42” monitors placed in portrait orientation: 2 in the front, 2 in the back, all connected to the computer;</li>
+<li>The frame is then covered with 4 semi-transparent reflective glass panels: the booth becomes a huge reflective mirror, but you can still see the TVs content through the glass;</li>
+<li>One of the glass panel has a <a href="http://www.displax.com/en/products/products/skin-multitouch.html">multitouch foil</a> glued to it (from the inside) which automagically makes the booth touch enabled;</li>
+<li>The computer launches a super big frameless Chrome window and loads a website where the “software” resides;</li>
+<li>Everything is done in HTML5: video recording, <a href="http://jnordberg.github.io/gif.js/">GIF rendering</a> and everything is transmitted via regular AJAX calls to our server;</li>
+<li>Monitoring of the booth is done by a combination of daily email reports, regularly saved screenshots in a Dropbox account and LogMeIn;</li>
+</ul><p>This was the first time any of us had done this kind of work. It implied getting our hands dirty in the hardware side of things as well developing completely new software solutions since we had nothing to compare to. In retrospect, I think we did an awesome job. We had enough know-how to get this done, but we were also naive enough to try completely new and difficult things that ultimately made this project unique. We did make some mistakes though, so here are some things to remember if you ever wanna get into this kind of venture:</p>
+<p><strong>Don’t take anything for granted</strong></p>
+<p>I entered the project assuming we would have a stable high-speed Internet connection. Everyone has high-speed Internet, right? I never, ever, thought about optimizing stuff. We ended having a pretty slow wireless connection. While this was not dramatic, this meant we had a significant lag between what was displayed on the booth and what was displayed on the public website. The speed problem was ultimately resolved but here’s another thing we hadn’t thought about: wake-on-wireless-LAN is still pretty much non-existent these days. So we had no way to remotely start the computer. This ended up being pretty bad.</p>
+<p><strong>Plan for the worst</strong></p>
+<p>The biggest mistake we did is assume the booth would boot and then the rest would take care of itself (oh boy was this stupid). The first weekend after the launch, some kids managed to move the Chrome window and create folders on the desktop. Our clients we’re forced to shut it down… the hard way. Believe or not: we hadn’t tested out our wake-on-LAN functionality. This is where we figured out it wasn’t gonna work on a wireless network and we would not be able to boot it up. So we had to go back, open up the case by removing one of the panels, and manually start up the computer. Crazy stuff. We managed to install a power switch outside the case in case of emergencies.</p>
+<p><strong>Monitor everything</strong></p>
+<p>We also faced some inconsistencies with various HTML5 APIs. Mainly with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator.getUserMedia">getUserMedia</a> which would fire 95% of the time but sometimes would just fail silently. Again, this was pretty bad since the visitors would get totally black pictures of themselves. I solved this by aggressively reloading the web page if anything wouldn’t work as expected at launch. I eventually logged all <a href="http://blog.mediumequalsmessage.com/clientside-error-logging-with-google-event-tracking">JavaScript errors to Google Analytics</a>. This proved to be really useful for debugging down the road.</p>
+<p>In the end, this was and still is a really rewarding project. I don’t think I’ll ever get bored of watching people goof around the booth. We already have a ton of ideas to improve the project and push it further so stay tuned!</p>

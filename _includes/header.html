@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header layout-column">
 
   <div class="wrapper">
 
@@ -13,13 +13,34 @@
         </svg>
       </a>
 
-      <div class="trigger">
+      <ul class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <li>
+			  <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+		  </li>
+
           {% endif %}
         {% endfor %}
-      </div>
+      </ul>
+
+		<ul class="social-media-list">
+			<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+
+			{% if site.github_username %}
+			<li>
+				{% include icon-github.html username=site.github_username %}
+			</li>
+			{% endif %}
+
+			{% if site.twitter_username %}
+			<li>
+				{% include icon-twitter.html username=site.twitter_username %}
+			</li>
+			{% endif %}
+		</ul>
+
+		<p>{{ site.description }}</p>
     </nav>
 
   </div>
