@@ -25,9 +25,11 @@
 			</ul>
 
 			<ul class="social-media-list">
-				<li>
-					<a href="mailto:{{ site.email }}">{{ site.email }}</a>
-				</li>
+				{% if site.email %}
+					<li>
+						{% include icon-email.html email=site.email %}
+					</li>
+				{% endif %}
 
 				{% if site.github_username %}
 					<li>

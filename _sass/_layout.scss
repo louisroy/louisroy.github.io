@@ -16,10 +16,25 @@
 .posts-list {
 	color: $white;
 	background-color: $blue;
+	z-index:2;
+
+	.post-meta {
+		color:$white-dark;
+	}
+
+	a {
+		color:$white;
+
+		&:hover {
+			color:$white-light;
+		}
+
+	}
 }
 
 .post {
 	max-width:50%;
+	z-index:1;
 }
 
 /**
@@ -39,6 +54,7 @@
     position: relative;
 	background-color:$black;
 	color:$white;
+	z-index:3;
 }
 
 .site-title {
@@ -47,11 +63,6 @@
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
 }
 
 .site-nav {
