@@ -70,10 +70,14 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $blue:#29A3CC;
+$blue-light:lighten($blue, 25%);
+$blue-dark:darken($blue, 25%);
 $black:#222222;
-$black-light:lighten(#222222, 40%);
-$black-dark:lighten(#222222, 40%);
+$black-light:lighten($black, 40%);
+$black-dark:darken($black, 25%);
 $white:#fdfdfd;
+$white-light:lighten($white, 40%);
+$white-dark:darken($white, 25%);
 
 // Width of the content area
 $content-width:    640px;
