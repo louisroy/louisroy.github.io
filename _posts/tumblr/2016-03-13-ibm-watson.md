@@ -6,7 +6,8 @@ tags:
 - watson
 - ai
 - jeopardy
-tumblr_url: http://louisroy.net/post/138793510922/found-this-short-documentary-while-browsing-the
+redirect_from:
+- /post/138793510922/found-this-short-documentary-while-browsing-the
 ---
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/lI-M7O_bRNg" frameborder="0" allowfullscreen></iframe>
 
