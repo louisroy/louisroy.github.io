@@ -15,7 +15,6 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    font-family: 'Lora', serif;
     color: $text-color;
 	background-image:url(../img/background.jpg);
 	background-size:cover;
@@ -47,6 +46,12 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+hr {
+    padding:0;
+    margin:$spacing-unit / 2 0;
+    border:0;
+    border-top:1px solid white;
+}
 
 
 /**
