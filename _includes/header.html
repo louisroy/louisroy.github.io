@@ -1,8 +1,8 @@
 <header class="site-header layout-column">
 	<div class="wrapper">
-		<a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-		<img class="site-picture" src="http://www.gravatar.com/avatar/96bdf6d57775f156dbe640b1b4b4691d?s=500" alt="Photo of Louis Roy" >
+		<a class="site-title" href="{{ site.baseurl }}/">
+			<img class="site-picture" src="http://www.gravatar.com/avatar/96bdf6d57775f156dbe640b1b4b4691d?s=500" alt="Photo of Louis Roy" >
+		</a>
 
 		<nav class="site-nav">
 			<a href="#" class="menu-icon">
@@ -26,27 +26,27 @@
 				{% endfor %}
 			</ul>
 
+			<p class="site-description">{{ site.description }}</p>
+
 			<ul class="social-media-list">
 				{% if site.email %}
-					<li>
-						{% include icon-email.html email=site.email %}
-					</li>
+				<li>
+					{% include icon-email.html email=site.email %}
+				</li>
 				{% endif %}
 
 				{% if site.github_username %}
-					<li>
-						{% include icon-github.html username=site.github_username %}
-					</li>
+				<li>
+					{% include icon-github.html username=site.github_username %}
+				</li>
 				{% endif %}
 
 				{% if site.twitter_username %}
-					<li>
-						{% include icon-twitter.html username=site.twitter_username %}
-					</li>
+				<li>
+					{% include icon-twitter.html username=site.twitter_username %}
+				</li>
 				{% endif %}
 			</ul>
-
-			<p>{{ site.description }}</p>
 		</nav>
 	</div>
 </header>

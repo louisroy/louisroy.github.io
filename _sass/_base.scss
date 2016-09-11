@@ -15,6 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font-family: 'Lora', serif;
     color: $text-color;
 	background-image:url(../img/background.jpg);
 	background-size:cover;
@@ -30,7 +31,11 @@ body {
 	margin: 0;
 }
 
-
+.social-media-list,
+.site-title,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Istok Web', sans-serif;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
