@@ -38,7 +38,7 @@
 }
 
 .post {
-	max-width:50%;
+	min-width:50%;
 	z-index:1;
     position:absolute;
     right:0;
@@ -66,6 +66,8 @@
 	min-height:100%;
     display:flex;
     align-items:center;
+    text-align:center;
+  font-size:80%;
 }
 
 .site-title {
@@ -76,11 +78,6 @@
     margin-bottom: 0;
 	text-align: center;
 	display: block;
-}
-
-.site-description {
-  text-align:center;
-  font-size:80%;
 }
 
 .site-picture {

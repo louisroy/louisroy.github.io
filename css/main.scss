@@ -11,32 +11,11 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
+$spacing-unit-small:15px;
 
 $text-color:       #222222;
 $background-color: #fdfdfd;
 $brand-color:      #29A3CC;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$blue:#29A3CC;
-$blue-light:lighten($blue, 25%);
-$blue-dark:darken($blue, 25%);
-$black:#222222;
-$black-light:lighten($black, 40%);
-$black-dark:darken($black, 25%);
-$white:#fdfdfd;
-$white-light:lighten($white, 40%);
-$white-dark:darken($white, 25%);
-
-// Width of the content area
-$content-width:    640px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -46,16 +25,155 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
+*, *:after, *:before {
+  box-sizing:border-box;
+}
 
+/**
+ * Basic styling
+ */
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-image:url(../img/background.jpg);
+  background-size:cover;
+  background-attachment:fixed;
+  background-position:right bottom;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  padding: $spacing-unit;
+  margin: 0;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+  @include media-query(720px) {
+    background-position:center bottom;
+    padding:$spacing-unit-small;
+    font-size:$small-font-size;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family:"Istok Web", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color:$brand-color;
+  text-decoration:none;
+  transition:color 0.25s ease-out;
+
+  &:hover {
+    color:lighten($brand-color, 30%);
+  }
+}
+
+hr {
+  border:none;
+  height:10px;
+  background-image:url(../img/background.jpg);
+}
+
+.layout-wrapper {
+  width:50%;
+
+  @include media-query(720px) {
+    width:auto;
+  }
+}
+
+.site-header {
+  background-color:rgba(#FEFEFE, 0.8);
+  padding:$spacing-unit;
+  margin-bottom:$spacing-unit;
+  text-align:center;
+
+  @include media-query(720px) {
+    padding:$spacing-unit-small;
+    margin-bottom:$spacing-unit-small;
+  }
+}
+
+.post,
+.post-list {
+  background-color:rgba(#FEFEFE, 0.8);
+  list-style:none;
+  padding:$spacing-unit;
+  margin:0;
+
+  @include media-query(720px) {
+    padding:$spacing-unit-small;
+  }
+
+  *:first-child {
+    margin-top:0;
+
+    .post-header,
+    .post-link {
+      padding-top:0;
+    }
+  }
+
+  *:last-child {
+    margin-bottom:0;
+
+    .post-header,
+    .post-link {
+      padding-bottom:0;
+    }
+  }
+}
+
+.post-header {
+  &:first-child {
+    padding-top:0;
+  }
+
+  &:last-child {
+    padding-top:0;
+  }
+}
+
+.post-header,
+.post-link {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  padding:$spacing-unit / 2 0;
+
+  @include media-query(720px) {
+    padding:$spacing-unit-small / 2 0;
+  }
+
+  .post-title {
+    flex-grow:1;
+    margin:0;
+  }
+
+  .post-meta {
+    flex-shrink:0;
+    margin:0;
+    padding-left:$spacing-unit;
+
+    @include media-query(720px) {
+      padding-left:$spacing-unit-small;
+    }
+  }
+}
+
+.site-title {
+  display:inline-block;
+}
+
+.site-picture {
+  display:block;
+  width:100px;
+  height:auto;
+  border-radius:50%;
+}

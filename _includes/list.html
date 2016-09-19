@@ -1,15 +1,10 @@
-<h1 class="page-heading">Posts</h1>
-
-<hr>
-
 <ul class="post-list">
 	{% for post in site.posts %}
 	<li class="post-list-item {% if include.title == post.title %}post-list-item-active{% endif %}">
-		<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-		<h2>
-			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-		</h2>
+		<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+			<h2 class="post-title">{{ post.title }}</h2>
+			<aside class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</aside>
+		</a>
 	</li>
 	{% endfor %}
 </ul>
