@@ -89,9 +89,12 @@ hr {
 }
 
 .site-header {
+  position:relative;
   background-color:rgba(#FEFEFE, 0.8);
   padding:$spacing-unit;
+  padding-top:$spacing-unit * 2;
   margin-bottom:$spacing-unit;
+  margin-top:$spacing-unit * 2;
   text-align:center;
 
   @include media-query(720px) {
@@ -168,7 +171,11 @@ hr {
 }
 
 .site-title {
-  display:inline-block;
+  display:block;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translate(-50%, -50%);
 }
 
 .site-picture {
