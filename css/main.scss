@@ -127,7 +127,8 @@ hr {
 }
 
 .layout-wrapper {
-  width:50%;
+  width:100%;
+  max-width:720px;
 
   @include media-query(720px) {
     width:auto;
@@ -222,9 +223,7 @@ hr {
   align-items:stretch;
 
   @include media-query(720px) {
-    flex-direction:column;
     flex-wrap:wrap;
-    height:100px;
     margin-bottom:$spacing-unit-small;
   }
 }
@@ -264,7 +263,7 @@ hr {
     flex-grow: 0;
     flex-shrink: 1;
     font-size:$base-font-size * 0.70;
-    padding:0;
+    padding:$spacing-unit-small;
   }
 }
 
@@ -274,9 +273,14 @@ hr {
   background-color:$brand-color;
   justify-content:space-around;
 
+  @include media-query(720px) {
+    flex-direction:row;
+    flex-grow:1;
+    justify-content:flex-end;
+    align-items:center;
+  }
 
   a {
-    flex-grow:1;
     padding:0 5px;
     display:block;
     color:white;
