@@ -7,4 +7,5 @@ group :jekyll_plugins do
     gem 'jekyll-redirect-from'
     gem 'jekyll-livereload'
     gem 'jekyll-autoprefixer'
+    gem 'jekyll-sitemap'
 end

@@ -21,4 +21,5 @@ markdown: kramdown
 
 gems:
   - jekyll-autoprefixer
+  - jekyll-sitemap
   - jekyll-redirect-from
