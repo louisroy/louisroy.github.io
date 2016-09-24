@@ -20,4 +20,5 @@ github_username:  louisroy
 markdown: kramdown
 
 gems:
+  - jekyll-autoprefixer
   - jekyll-redirect-from
