@@ -244,10 +244,11 @@ hr {
 }
 
 .site-description {
+  display:flex;
   flex-grow:1;
   padding:0 $spacing-unit;
   margin:0;
-  align-self: center;
+  align-items:center;
 
   @include media-query(1100px) { font-size:$base-font-size * 0.90; }
   @include media-query(900px) { font-size:$base-font-size * 0.80; }
