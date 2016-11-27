@@ -11,4 +11,4 @@ After dumping Dreamhost, I'm finally moving off Tumblr for a leaner, more flexib
 
 I was initially tempted by Tumblr for its ease of use, the ability to post content through their mobile app and the general community surrounding.
 
-A couple years passed and I realized I'm not using the community features at all, barely using the mobile app and found out that theming Tumblr is a kind of a pain in the ass. Peak has really helped with that though.
+A couple years passed and I realized I'm not using the community features at all, barely using the mobile app and found out that theming Tumblr is a kind of a pain in the ass. [Peak](https://github.com/nporteschaikin/peak) has really helped with that though.
