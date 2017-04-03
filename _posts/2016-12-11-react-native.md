@@ -7,6 +7,8 @@ tags:
 - react
 ---
 
+![Screenshot]({{ site.url }}/assets/casting-defect.png)
+
 Since last year, I've been helping a couple of my buddies to kick-start their new metallurgic consultancy company and establish their presence on the Web by various means. One of the idea we got was to develop [a mobile app](http://castingdefect.com/) that would help foundries diagnose and fix casting defects they were having on a day-to-day basis. This is a pretty common issue in this industry and, apart from big ERP solutions, there are no real light-weight alternatives to digitize that data and share knowledge across a foundry on when and how defects occur and how to fix them.
 
 We got this idea pretty much when [React Native](https://facebook.github.io/react-native/) was starting to gain traction in the tech community. Since I was already working full-time and didn't have much time on my hands to develop such an app, React Native felt like a good choice : I'd be saving a loads of time by developing in a language I mastered (JavaScript) and being able to build features for both iOS and Android at the same time. What really hooked me though was the ["learn once, write everywhere" approach](https://facebook.github.io/react/blog/2015/03/26/introducing-react-native.html). I knew from past experiences with [Cordova](https://cordova.apache.org/) that "universal" apps for multiple platforms usually don't offer the best experiences.
