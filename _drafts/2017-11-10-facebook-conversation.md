@@ -34,4 +34,6 @@ I quickly realized that, while we didn't have any emojis, we still had links to 
 
 I grouped the discussion by day, then by month, including a page break after each month so it would be easier to scroll once it's in paper format. Sprinkled some CSS and some Google Fonts to make this pretty and voilà! The final HTML file is ready.
 
+# Next steps
+
 Next up will be packaging and printing. I'll have to convert that monstrous HTML file to PDF. I'll probably be using the aptly named [HTML to PDF](https://www.npmjs.com/package/html-pdf) package for this. Printing will be tricky though, I have yet to find a website that does nano-short runs (I'll be needing like 8 of them) at a "reasonable" price.
