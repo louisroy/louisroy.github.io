@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Facebook Conversations
-date: '2017-11-101T12:01:39-05:00'
+date: '2017-10-28T12:01:39-05:00'
 tags:
 - facebook
 - scraper
@@ -9,7 +9,7 @@ tags:
 
 My buddies and I have a long-standing group conversation on Facebook. It's pretty much the most chaotic discussion ever. In fact, it's not a discussion as much as it is mainly insides jokes and completely random thoughts rarely connected to each other. But since we live spread out across North America, it's pretty much the best spot we have to keep news of each other and remember our good (and no so good) times. For a while now, we've been talking about saving all of these thoughts and jokes somewhere as a backup in case Facebook (or society as a whole) collapses. This conversation will be hitting the five-year mark this winter, so I thought I'd start exploring how we might work this out and possibly produce a super-limited book out of it (because our jokes are *that* good).
 
-# Fetching
+## Fetching
 
 First thing is to fetch the actual data. There are two ways to go about this:
 
@@ -22,11 +22,11 @@ A scraper lets you fetch the conversation as it was originally written (with all
 
 After struggling with the scraper, I just moved on and used Facebook's data.
 
-# Organizing
+## Organizing
 
 Since Facebook's conversation file is all mixed up, I needed some help to extract our group's conversation. Fortunately, a good samaritan wrote a [Facebook Chat Archive Paster](https://github.com/ownaginatious/fbchat-archive-parser) which basically analyzes and splits your huge conversation file into actual conversation files.
 
-# Presenting
+## Presenting
 
 The conversation text file you get is pretty rough. You basically get what everyone said in chronological order with a timestamp and the name of the author. I wanted to make it easier to read so I started parsing and templating the file using good old PHP.
 
@@ -34,6 +34,6 @@ I quickly realized that, while we didn't have any emojis, we still had links to 
 
 I grouped the discussion by day, then by month, including a page break after each month so it would be easier to scroll once it's in paper format. Sprinkled some CSS and some Google Fonts to make this pretty and voilà! The final HTML file is ready.
 
-# Next steps
+## Next steps
 
 Next up will be packaging and printing. I'll have to convert that monstrous HTML file to PDF. I'll probably be using the aptly named [HTML to PDF](https://www.npmjs.com/package/html-pdf) package for this. Printing will be tricky though, I have yet to find a website that does nano-short runs (I'll be needing like 8 of them) at a "reasonable" price.
