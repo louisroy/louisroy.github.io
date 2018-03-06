@@ -5,14 +5,8 @@ GEM
     autoprefixer-rails (6.3.7)
       execjs
     colorator (0.1)
-    em-websocket (0.5.1)
-      eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.6.0)
-    eventmachine (1.2.0.1)
     execjs (2.7.0)
-    fastercsv (1.5.5)
     ffi (1.9.10)
-    http_parser.rb (0.6.0)
     jekyll (3.0.1)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
@@ -24,13 +18,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-autoprefixer (1.0.0)
       autoprefixer-rails (~> 6.3.6)
-    jekyll-import (0.9.0)
-      fastercsv
-      jekyll (>= 1.4)
-      nokogiri
-    jekyll-livereload (0.2.2)
-      em-websocket (~> 0.5)
-      jekyll (~> 3.0)
     jekyll-redirect-from (0.11.0)
       jekyll (>= 2.0)
     jekyll-sass-converter (1.4.0)
@@ -45,9 +32,6 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
-    mini_portile2 (2.0.0)
-    nokogiri (1.6.7.1)
-      mini_portile2 (~> 2.0.0.rc2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
@@ -61,10 +45,8 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-autoprefixer
-  jekyll-import
-  jekyll-livereload
   jekyll-redirect-from
   jekyll-sitemap
 
 BUNDLED WITH
-   1.13.0
+   1.16.1
