@@ -13,9 +13,9 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 $spacing-unit-small:15px;
 
-$text-color:       #222222;
-$background-color: #fdfdfd;
-$brand-color:      #29A3CC;
+$text-color:       #FEFEFE;
+$background-color: #40668c;
+$brand-color:      #FFF1CD;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -100,10 +100,12 @@ h1, h2, h3, h4, h5 {
 a {
   color:$brand-color;
   text-decoration:none;
+  border-bottom:1px dotted $brand-color;
   transition:color 0.25s ease-out;
 
   &:hover {
     color:lighten($brand-color, 30%);
+    border-color:lighten($brand-color, 30%);
   }
 }
 
@@ -132,9 +134,17 @@ hr {
   }
 }
 
+.disclaimer {
+  min-height:100vh;
+}
+
+.disclaimer-title {
+  font-size: $spacing-unit;
+}
+
+.disclaimer,
 .post,
 .post-list {
-  background-color:rgba(#FEFEFE, 0.8);
   list-style:none;
   padding:$spacing-unit;
   margin:0;
@@ -287,7 +297,6 @@ hr {
 
 .btn-back {
   position:relative;
-  background-color:rgba(#FEFEFE, 0.8);
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -295,6 +304,10 @@ hr {
 
   @include media-query(720px) {
     margin-bottom:$spacing-unit-small;
+  }
+  
+  &:hover .icon-back {
+    color:lighten($brand-color, 30%);
   }
 }
 
@@ -304,11 +317,9 @@ hr {
   display:flex;
   align-items:center;
   justify-content:center;
-  background-color:$brand-color;
-  color:white;
+  color:$brand-color;
 }
 
 .label-back {
-  padding:0 $spacing-unit / 3;
   margin:0;
 }
