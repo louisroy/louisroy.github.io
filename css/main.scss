@@ -1,3 +1,6 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
 @charset "utf-8";
 
 // Our variables
@@ -77,6 +80,7 @@ body {
   background-size:cover;
   background-attachment:fixed;
   background-position:right bottom;
+  text-size-adjust: 100%;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   padding: $spacing-unit;
@@ -107,7 +111,7 @@ a {
 
 a.external:after {
   content: "\00a0\00a0\f08e";
-  font-family: FontAwesome, sans-serif;
+  font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -128,6 +132,10 @@ hr {
   @include media-query(720px) {
     width:auto;
   }
+}
+
+.disclaimer {
+  min-height:100vh;
 }
 
 .disclaimer-title {
@@ -297,7 +305,7 @@ hr {
   @include media-query(720px) {
     margin-bottom:$spacing-unit-small;
   }
-  
+
   &:hover .icon-back {
     color:lighten($brand-color, 30%);
   }
